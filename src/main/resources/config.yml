@@ -1,0 +1,338 @@
+# ================================================================
+#                         CYTRILDUEL
+#                  VERY LARGE CONFIGURATION
+# ================================================================
+# Semua opsi di file ini aman diedit tanpa mengubah source code.
+# Setelah edit gunakan /duel reload.
+
+config-version: 3
+
+# --------------------------- UMUM --------------------------------
+general:
+  debug: false
+  check-updates: false
+  allow-commands-while-dueling: false
+  allow-spectators-join: true
+  auto-teleport-to-lobby-on-join: true
+  clear-inventory-on-lobby: true
+  clear-inventory-before-duel: true
+  restore-gamemode-after-duel: SURVIVAL
+  restore-fly-after-duel: false
+
+# --------------------------- LOBBY --------------------------------
+lobby:
+  world: ""
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+  freeze-player: false
+  disable-pvp: true
+  disable-hunger: true
+  disable-damage: true
+  clear-weather: false
+  keep-time: false
+  time: 6000
+
+# ------------------------- REQUEST DUEL ----------------------------
+requests:
+  timeout-seconds: 60
+  allow-while-in-combat: false
+  allow-same-party: false
+  one-incoming-per-player: true
+  one-outgoing-per-player: true
+  notify-sender: true
+  notify-target: true
+  clickable-buttons: true
+  allow-cancel-by-target: true
+
+# --------------------------- DUEL ---------------------------------
+duel:
+  countdown-seconds: 5
+  countdown-titles: true
+  countdown-actionbar: true
+  countdown-sounds: true
+  start-title: true
+  end-title: true
+  freeze-during-countdown: true
+  max-duration-seconds: 900
+  cancel-on-empty-team: true
+  teleport-spectators-to-center: true
+  return-to-lobby-delay-ticks: 20
+  restore-health-food: true
+  heal-on-start: true
+  clear-effects-on-start: true
+  clear-effects-on-end: true
+  reset-experience-on-start: false
+  reset-experience-on-end: false
+  prevent-build: true
+  prevent-break: true
+  prevent-interact-outside-arena: true
+  prevent-chest-opening: true
+  allow-spectator-chat: true
+  spectator-chat-format: "&8[SPEC] &7%player%&f: %message%"
+
+# ----------------------- ATURAN PVP DETAIL ------------------------
+pvp:
+  enabled: true
+  allow-melee: true
+  allow-projectiles: true
+  allow-bows: true
+  allow-crossbows: true
+  allow-tridents: true
+  allow-fishing-rod: true
+  allow-snowballs: true
+  allow-eggs: true
+  allow-potions: true
+  allow-lingering-potions: true
+  allow-splash-potions: true
+  allow-ender-pearl: true
+  allow-chorus-fruit: false
+  allow-firework-damage: true
+  allow-tnt: false
+  allow-crystals: false
+  allow-bed-explosion: false
+  allow-respawn-anchor-explosion: false
+  allow-fire-damage: true
+  allow-fall-damage: true
+  allow-drowning: true
+  allow-suffocation: true
+  allow-lava-damage: true
+  allow-void-damage: true
+  allow-contact-damage: true
+  allow-starvation: false
+  natural-regeneration: true
+  instant-regen-on-kill: false
+  regen-amount: 20.0
+  damage-others-outside-duel: false
+  friendly-fire: false
+  projectile-friendly-fire: false
+  knockback: true
+  attack-cooldown: true
+
+# -------------------------- COMBAT --------------------------------
+combat:
+  combat-log-enabled: true
+  combat-log-seconds: 15
+  combat-tag-message: true
+  prevent-logout: false
+  prevent-command: false
+  commands-allowed:
+    - "msg"
+    - "tell"
+    - "r"
+  disable-teleport-commands: true
+  disable-ender-pearl: false
+  disable-creative: true
+  disable-flight: true
+  reset-flight-on-start: true
+  reset-flight-on-end: false
+  keep-inventory: false
+  drop-items: false
+  drop-exp: false
+  show-damage-numbers: false
+
+# ------------------------- SPECTATOR ------------------------------
+spectator:
+  enabled: true
+  radius: 100
+  gamemode: SPECTATOR
+  can-fly: true
+  can-pickup-items: false
+  can-interact: false
+  can-chat: true
+  hidden-from-other-spectators: false
+  teleport-back-to-center-on-leave: true
+  night-vision: true
+
+# ------------------------- ARENA ---------------------------------
+arena:
+  allow-overlap: false
+  require-loaded-world: true
+  require-kit: false
+  auto-select-free-arena: true
+  reserve-on-request: false
+  global:
+    enabled: true
+    minimum-players-to-start: 2
+    maximum-players: 50
+    join-during-match: true
+    random-spawn: false
+    finish-when-one-left: true
+  border:
+    enabled: false
+    size: 100
+    damage: 0.2
+    warning-distance: 5
+
+# --------------------------- KIT ---------------------------------
+kits:
+  give-armor: true
+  clear-before-give: true
+  allow-kit-change: false
+  restore-original-inventory: false
+  restore-original-armor: false
+  restore-original-offhand: false
+  lock-items: false
+  lock-slots: false
+
+# ------------------------- PARTY ---------------------------------
+party:
+  enabled: true
+  max-size: 10
+  leader-only-duel: true
+  auto-create-solo-party: true
+  disband-on-leader-quit: true
+  leave-on-quit: true
+  same-party-pvp: false
+  party-chat: false
+
+# ------------------------- HOTBAR --------------------------------
+hotbar:
+  enabled: true
+  refresh-on-join: true
+  refresh-after-duel: true
+  prevent-drop: true
+  prevent-move: true
+  prevent-swap: true
+  party-slot: 0
+  profile-slot: 4
+  duel-slot: 8
+
+# -------------------------- GUI ----------------------------------
+gui:
+  enabled: true
+  main-title: "&6&lCYTRIL DUEL"
+  player-list-title: "&6Pilih Lawan"
+  arena-title: "&6Pilih Arena"
+  party-title: "&6Party"
+  profile-title: "&6Profile"
+  filler-material: GRAY_STAINED_GLASS_PANE
+  back-button-enabled: true
+  close-button-enabled: true
+  player-heads-enabled: true
+  show-online-status: true
+  show-stats-in-lore: true
+  show-kit-in-lore: true
+  sounds: true
+
+# -------------------------- VISUAL --------------------------------
+visual:
+  bossbar:
+    enabled: true
+    color: BLUE
+    style: SEGMENTED_10
+    title: "&6Duel &f%arena% &7| &a%alive_a% &fvs &c%alive_b%"
+  scoreboard:
+    enabled: false
+    title: "&6&lCYTRILDUEL"
+    lines:
+      - "&7"
+      - "&fArena: &e%arena%"
+      - "&fKit: &e%kit%"
+      - "&aTeam A: %alive_a%"
+      - "&cTeam B: %alive_b%"
+      - "&7"
+  actionbar:
+    enabled: true
+    duel: "&6⚔ &f%arena% &7| &a%alive_a% &fv &c%alive_b%"
+  titles:
+    start-title: "&6&lDUEL!"
+    start-subtitle: "&fSemoga menang!"
+    win-title: "&a&lMENANG!"
+    lose-title: "&c&lKALAH!"
+    spectator-title: "&e&lSPECTATOR"
+
+# -------------------------- SOUND ---------------------------------
+sounds:
+  enabled: true
+  countdown-5: BLOCK_NOTE_BLOCK_PLING
+  countdown-4: BLOCK_NOTE_BLOCK_PLING
+  countdown-3: BLOCK_NOTE_BLOCK_PLING
+  countdown-2: BLOCK_NOTE_BLOCK_PLING
+  countdown-1: BLOCK_NOTE_BLOCK_PLING
+  countdown-go: ENTITY_PLAYER_LEVELUP
+  duel-start: ENTITY_ENDER_DRAGON_GROWL
+  kill: ENTITY_PLAYER_ATTACK_CRIT
+  death: ENTITY_PLAYER_HURT
+  win: UI_TOAST_CHALLENGE_COMPLETE
+  lose: ENTITY_VILLAGER_NO
+  spectator: BLOCK_GLASS_BREAK
+  request: BLOCK_NOTE_BLOCK_BELL
+  click: UI_BUTTON_CLICK
+  volume: 1.0
+  pitch: 1.0
+
+# -------------------------- EFFECT --------------------------------
+effects:
+  enabled: true
+  duel-start-fireworks: false
+  win-fireworks: true
+  lose-fireworks: false
+  kill-particle: true
+  start-particle: true
+  end-particle: true
+  particle-count: 25
+  kill-particle-type: CRIT
+  start-particle-type: FLAME
+  end-particle-type: TOTEM_OF_UNDYING
+
+# -------------------------- STATS ---------------------------------
+stats:
+  enabled: true
+  file: stats.yml
+  count-kills: true
+  count-wins: true
+  count-losses: true
+  count-quit-as-loss: true
+  save-on-every-change: true
+  save-interval-seconds: 30
+
+# ----------------------- LEADERBOARD ------------------------------
+leaderboard:
+  enabled: true
+  refresh-seconds: 60
+  max-entries: 100
+  names-use-cache: true
+
+# -------------------------- MESSAGES ------------------------------
+messages:
+  prefix: "&8[&6CytrilDuel&8] &r"
+  join: "&aSelamat datang di &6CytrilDuel&a! Ketik &f/duel &auntuk mulai."
+  no-permission: "&cKamu tidak memiliki izin untuk perintah ini."
+  player-not-found: "&cPemain tidak ditemukan."
+  self-duel: "&cKamu tidak bisa menantang dirimu sendiri."
+  already-dueling: "&cKamu atau target sedang berada dalam duel lain."
+  request-already-sent: "&cKamu masih memiliki ajakan duel yang belum direspon. Gunakan /duel cancel."
+  request-sent: "&aAjakan duel dikirim ke &f%target% &7(arena: %arena%, kit: %kit%)"
+  request-expired: "&7Ajakan duelmu kedaluwarsa."
+  request-expired-target: "&7Ajakan duel sudah kedaluwarsa."
+  request-cancelled: "&7Ajakan duel dibatalkan."
+  request-denied: "&7Ajakan duel ditolak."
+  arena-unavailable: "&cArena sudah tidak tersedia lagi."
+  arena-created: "&aArena &f%arena% &aberhasil dibuat!"
+  kit-saved: "&aKit &f%kit% &aberhasil disimpan."
+  lobby-set: "&aLobby PvP berhasil diatur."
+  reload: "&aKonfigurasi CytrilDuel berhasil dimuat ulang."
+  duel-start: "&6Duel dimulai! &f%arena% &7| kit: %kit%"
+  duel-win: "&6Duel selesai! Pemenang: &a%winner%"
+  player-eliminated: "&c%player% tumbang dan menjadi spectator!"
+  player-global-eliminated: "&c%player% tersingkir dari arena global!"
+  global-win: "&6Arena global selesai! Pemenang: &a%winner%"
+  spectator: "&eKamu sekarang spectator."
+  timeout: "&eDuel berakhir karena waktu habis."
+  build-disabled: "&cBuild/break dinonaktifkan selama duel."
+  interact-disabled: "&cInteraksi ini dinonaktifkan selama duel."
+  pvp-disabled: "&cPvP sedang dinonaktifkan di area ini."
+  stats-header: "&6Statistik %player%:"
+  stats-win: "&7Menang: &a%wins%"
+  stats-loss: "&7Kalah: &c%losses%"
+  stats-kill: "&7Kill: &e%kills%"
+
+# ----------------------- ADMIN / COMMAND --------------------------
+admin:
+  reload-permission: cytrilduel.admin
+  settings-permission: cytrilduel.admin
+  allow-config-command: true
+  allow-debug-command: true
