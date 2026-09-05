@@ -1,0 +1,26 @@
+# ==========================================
+#            CYTRILDUEL CONFIG
+# ==========================================
+
+lobby:
+  world: ""
+  x: 0.0
+  y: 0.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+
+# jarak maksimal spectator boleh bergerak dari titik tengah arena (blok)
+spectator-radius: 100
+
+# waktu hitung mundur sebelum duel dimulai (detik)
+duel-countdown: 5
+
+# hapus request duel/party otomatis setelah sekian detik jika tidak direspon
+request-timeout: 60
+
+# seberapa sering (detik) leaderboard di-cache ulang dari data statistik
+leaderboard-refresh-seconds: 60
+
+messages:
+  prefix: "&8[&6CytrilDuel&8] &r"
