@@ -29,11 +29,14 @@ jobs:
         run: java -version
 
       - name: Build with Maven
-        run: mvn -B clean package
+        run: mvn -B -U clean package
 
-      - name: Verify JAR exists
+      - name: Verify JAR
         shell: bash
-        run: test -s target/CytrilDuel.jar
+        run: |
+          test -s target/CytrilDuel.jar
+          echo "Built: target/CytrilDuel.jar"
+          file target/CytrilDuel.jar
 
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
